@@ -1,10 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
-      <%= link_to "Blog", home_path, id: "logo" %>
+      <%= link_to "Blog", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Trang chu", home_path %></li>
+          <li><%= link_to "Trang chu", root_path %></li>
           <li><%= link_to "Tro giup", help_path %></li>
           <% if signed_in? %>
             <li><%= link_to "Tai khoan", users_path %></li>
