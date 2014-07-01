@@ -2,11 +2,13 @@ require 'spec_helper'
 
 describe "HomePages" do
   
+  subject { page }
+
   describe "Home page" do
-  	it "should have the content 'Hello'" do
-  		visit '/home_page/home'
-  		expect(page).to have_content('Hello')
-  	end
+    before { visit root_path }
+
+    it { should have_content('Hello') }
+    
   end
 
 end
