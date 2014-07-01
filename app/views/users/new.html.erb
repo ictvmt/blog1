@@ -1,1 +1,24 @@
+<% provide(:title, 'Dang ky') %>
 <h1>Dang ky</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+
+      <%= f.label :name, "Ho ten" %>
+      <%= f.text_field :name %>
+
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :password, "Mat khau" %>
+      <%= f.password_field :password %>
+
+      <%= f.label :password_confirmation, "Nhap lai mat khau" %>
+      <%= f.password_field :password_confirmation %>
+
+      <%= f.submit "Tao tai khoan", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

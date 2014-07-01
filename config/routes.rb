@@ -1,5 +1,5 @@
 SampleBlog::Application.routes.draw do
-  get "users/new"
+  resources :users
   #get "home_page/home"
   root  'home_page#home'
   match '/signup',  to: 'users#new',            via: 'get'
